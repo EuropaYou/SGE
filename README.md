@@ -1,4 +1,4 @@
-# solo_card_game_engine
+# solo_game_engine
 
 A new Flutter project.
 
