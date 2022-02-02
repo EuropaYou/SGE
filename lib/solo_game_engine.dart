@@ -1,29 +1,6 @@
-// ignore_for_file: avoid_print
-
 import 'dart:math';
 
-void main(List < String > args) {
-  const prefixCard = ["red", "green", "blue", "yellow"];
-  const prefixNumber = [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "draw two",
-    "skip",
-    "reverse"
-  ];
-  //const rareCards = ["Wild Card", "Wild Draw 4 Card"];
-  print(Cards().generateCards(10, prefixCard, prefixNumber));
-  print(Cards().generateCardInMiddle(prefixCard, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]));
-  print(SliderPuzzleGame().mergeNumbers(SliderPuzzleGame().generateNumber(), SliderPuzzleGame().generateNumber()));
-}
+//TODO Rendering Engine
 
 class Table {
   generateTable(width, height, content) {
@@ -43,7 +20,6 @@ class Table {
   }
 }
 
-
 class Player {
   createPlayer() {}
 }
@@ -53,7 +29,7 @@ class Cards {
     final List _cards = [];
     for (var i = 0; i < numberOfCards; i++) {
       _cards.add(
-        "${cards[Random().nextInt(cards.length)]} ${numbers[Random().nextInt(numbers.length)]}");
+          "${cards[Random().nextInt(cards.length)]} ${numbers[Random().nextInt(numbers.length)]}");
     }
     return cards;
   }
@@ -64,8 +40,8 @@ class Cards {
 
   isSpecialCard(card) {
     if (card.contains('draw two') ||
-      card.contains('skip') ||
-      card.contains('reverse')) {
+        card.contains('skip') ||
+        card.contains('reverse')) {
       return true;
     } else {
       return false;
@@ -76,7 +52,6 @@ class Cards {
     return generateCards(numberOfCards, cards, numbers);
   }
 }
-
 
 class SliderPuzzleGame {
   generateNumber() {
@@ -99,3 +74,5 @@ class SliderPuzzleGame {
     }
   }
 }
+
+class Tycoon {}
